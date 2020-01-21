@@ -93,7 +93,8 @@ class HealthyThingsPage extends React.Component {
             })
             .catch((error) => {
                 debugger;
-                //TODO: alert error to user
+                alert('Cannot locate items')
+                //alert error to user
             });
     }
 
@@ -163,7 +164,7 @@ class HealthyThingsPage extends React.Component {
     handleSortOrderChange(event) {
         const value = event.target.value;
 
-        const listClone = [... this.state.list];
+        const listClone = [...this.state.list];
 
         if(value !=='') {
             listClone.sort();

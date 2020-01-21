@@ -36,6 +36,7 @@ class AddItemForm extends React.Component {
     this.props.handleSubmit(clone);
 
     this.setState({
+      imgUrl: "",
       name: "",
       benefits: "",
       uses: "",
