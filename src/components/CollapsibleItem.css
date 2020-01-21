@@ -1,0 +1,48 @@
+ table, th, td {
+    width: 100%;
+    border: 1px solid black
+ }
+
+ .item {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 80%;
+   margin-left: 100px;
+ }
+
+ .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+span.fixText {
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  margin-left: 50px;
+}
+
+.pointer {
+  cursor: pointer;
+}
