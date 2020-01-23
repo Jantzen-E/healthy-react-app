@@ -10,69 +10,72 @@ class AddItemForm extends React.Component {
       name: "",
       benefits: "",
       uses: "",
-      sideEffects: ""
+      sideEffects: "",
+      mode: "add" //'edit'
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleAdd = this.handleAdd.bind(this);
-    // this.getDerivedStateFromProps = this.getDerivedStateFromProps.bind(this);
   }
 
-//   static getDerivedStateFromProps(nextProps, prevState) {
-//       debugger;
-//     if (nextProps.editItem) {
-//       this.setState(nextProps.editItem);
-//     }
-
-//     return {
-//       show: nextProps.show
-//     };
-//   }
+  componentDidUpdate(prevProps) {
+    if (prevProps.editItem) {
+      if (
+        prevProps.editItem.imgUrl !== this.props.editItem.imgUrl ||
+        prevProps.editItem.name !== this.props.editItem.name ||
+        prevProps.editItem.benefits !== this.props.editItem.benefits ||
+        prevProps.editItem.uses !== this.props.editItem.uses ||
+        prevProps.editItem.sideEffects !== this.props.editItem.sideEffects
+      ) {
+        this.setState({
+          imgUrl: this.props.editItem.imgUrl,
+          name: this.props.editItem.name,
+          benefits: this.props.editItem.benefits,
+          uses: this.props.editItem.uses,
+          sideEffects: this.props.editItem.sideEffects,
+          mode: "edit"
+        });
+      }
+    }
+  }
 
   handleSubmit(e) {
     e.preventDefault();
 
-    const clone = { ...this.state };
-    this.props.handleSubmit(clone);
+    const item = {
+      imgUrl: this.state.imgUrl,
+      name: this.state.name,
+      benefits: this.state.benefits,
+      uses: this.state.uses,
+      sideEffects: this.state.sideEffects,
+    };
+
+    debugger;
+
+    this.props.handleSubmit(item, this.state.mode, this.props.editItem._id);
 
     this.setState({
       imgUrl: "",
       name: "",
       benefits: "",
       uses: "",
-      sideEffects: ""
-    });
-
-    // TODO: Clone the state values
-
-    // TODO: Emit to parent the new item
-
-    // TODO: Clear the fields
-  }
-
-  handleAdd() {
-    const item = this.state.itemInput;
-
-    if (item) {
-      this.props.onAddItem(item);
-    }
-
-    this.setState({
-      itemInput: ""
+      sideEffects: "",
+      mode: "add"
     });
   }
+
 
   render() {
     return (
-      <div>
-        <h3>Fill out the fields below to add a new item to the list</h3>
-        <form onSubmit={this.handleSubmit}>
+      <div className="addFormBackground">
+        <h4>Fill out the fields below to add a new item to the list</h4>
+        <form onSubmit={this.handleSubmit} className="addForm">
           <input
             type="text"
             required
             value={this.state.imgUrl}
             onChange={e => this.setState({ imgUrl: e.target.value })}
             placeholder="paste image URL here"
+            className="inputFields"
           />
           <input
             type="text"
@@ -80,6 +83,7 @@ class AddItemForm extends React.Component {
             value={this.state.name}
             onChange={e => this.setState({ name: e.target.value })}
             placeholder="name of item"
+            className="inputFields"
           />
           <input
             type="text"
@@ -87,6 +91,7 @@ class AddItemForm extends React.Component {
             value={this.state.benefits}
             onChange={e => this.setState({ benefits: e.target.value })}
             placeholder="benefits"
+            className="inputFields"
           />
           <input
             type="text"
@@ -94,6 +99,7 @@ class AddItemForm extends React.Component {
             value={this.state.uses}
             onChange={e => this.setState({ uses: e.target.value })}
             placeholder="uses"
+            className="inputFields"
           />
           <input
             type="text"
@@ -101,13 +107,10 @@ class AddItemForm extends React.Component {
             value={this.state.sideEffects}
             onChange={e => this.setState({ sideEffects: e.target.value })}
             placeholder="side effects"
+            className="inputFields"
           />
-          <button
-            onClick={this.handleAdd}
-            type="submit"
-            onSubmit={this.props.handleSubmit}
-          >
-            submit changes to add it to the list
+          <button type="submit" className="button">
+            {this.state.mode === "add" ? "Add To List" : "Update Item"}
           </button>
         </form>
       </div>

@@ -1,0 +1,43 @@
+button {
+    background-color: #de8d14;
+    height: 35px;
+    width: 30%;
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 10px 10px 8px rgb(39, 38, 38);
+    margin-top: 10px;
+}
+
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+
+.button:hover {
+    background-color: #2e210c;
+    color: white;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+.addForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputFields {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.addFormBackground {
+    background-color: #BE9046;
+    margin-left: 55px;
+    margin-right: 55px;
+    padding-bottom: 25px;
+}

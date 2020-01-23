@@ -35,67 +35,71 @@ class CollapsibleItem extends React.Component {
                 {
                     this.props.item ? (
                         <div>
-                            <img 
-                                src={ this.props.item.imgUrl } 
-                                alt={ this.props.item.name } 
-                                height="300" 
-                                width="430"
-                                display="block"
-                                margin-left="auto"
-                                margin-right="auto"
-                            />
-                            <span 
-                                className="fixText"
-                            >
-                                
-                                    { this.props.item.name }
-                            </span>
-                            {
-                                this.state.isOpen ? 
-                                    <IoMdArrowDropup 
-                                        onClick={ this.handleOpenToggle } 
-                                        size={32}
-                                        className="pointer"
-                                    /> 
-                                    : <IoMdArrowDropdown 
-                                        onClick={ this.handleOpenToggle } 
-                                        size={32}
-                                        className="pointer"
-                                    />
-                            }
-                            {
-                                this.state.isOpen ? 
-                                (
-                                    <div>
-                                        <p>
-                                            Benefits: { this.props.item.benefits }
-                                        </p>
-                                        <p>Uses: { this.props.item.uses }
-                                        </p>
-                                        <p>Side effects: { this.props.item.sideEffects } 
-                                        </p>
-                                        <div className="tooltip">
-                                            <IoMdCreate 
-                                                size={35} 
-                                                onClick={ this.handleEdit }
-                                            />
-                                            <span 
-                                                className="tooltiptext">Edit
-                                            </span>
+                            <div className="formatCards">
+                                <img 
+                                    src={ this.props.item.imgUrl } 
+                                    alt={ this.props.item.name }
+                                    className="productImage"
+                                    height="300" 
+                                    width="430"
+                                />
+                                <span 
+                                    className="fixText"
+                                >
+                                    
+                                        { this.props.item.name }
+                                </span>
+                                {
+                                    this.state.isOpen ? 
+                                        <IoMdArrowDropup 
+                                            onClick={ this.handleOpenToggle } 
+                                            size={60}
+                                            className="pointer"
+                                        /> 
+                                        : <IoMdArrowDropdown 
+                                            onClick={ this.handleOpenToggle } 
+                                            size={60}
+                                            className="pointer"
+                                        />
+                                }
+                            </div>
+                            <div className="formatOpenCards">
+                                {
+                                    this.state.isOpen ? 
+                                    (
+                                        <div className="expandedItemProperties">
+                                            <div>
+                                                <p>
+                                                    Benefits: { this.props.item.benefits }
+                                                </p>                                                
+                                                <p>Uses: { this.props.item.uses }
+                                                </p>                                                
+                                                <p>Side effects: { this.props.item.sideEffects } 
+                                                </p>
+                                            </div>
+                                            <div className="tooltip">
+                                                <IoMdCreate 
+                                                    size={35} 
+                                                    onClick={ this.handleEdit }
+                                                />
+                                                <span 
+                                                    className="tooltiptext">Edit
+                                                </span>
+                                            </div>
+                                            <br></br>
+                                            <div className="tooltip">
+                                                <IoIosTrash 
+                                                    size={40} 
+                                                    onClick={ this.handleDelete }
+                                                />
+                                                <span 
+                                                    className="tooltiptext">Delete
+                                                </span>
+                                            </div>
                                         </div>
-                                        <br></br>
-                                        <div className="tooltip">
-                                            <IoIosTrash 
-                                                size={40} 
-                                                onClick={ this.handleDelete }
-                                            />
-                                            <span 
-                                                className="tooltiptext">Delete
-                                            </span>
-                                        </div>
-                                    </div>
-                                ) : ''
-                            }
+                                    ) : ''
+                                }
+                            </div>
                         </div>
 
                     ) : ''

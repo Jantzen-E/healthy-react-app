@@ -1,5 +1,40 @@
 h1 {
-    background-color: cornflowerblue;
+    background-color:  #2e210c;
     background-size: unset;
-    font-size: 5em;
+    font-size: 4em;
+    color: #de8d14;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    background-color:  #2e210c;
+    margin-top: 0px;
+    color: #de8d14;
+    padding-bottom: 10px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+.selectInput {
+    padding: 8px 16px;
+    margin-bottom: 20px;
+}
+
+.pageFormat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchAndSort {
+    /* display: flex; 
+    align-items: center;
+    justify-content: center; */
+    background-color: burlywood;
+    margin-left: 55px;
+    margin-right: 55px;
+    text-align: center;
 }
