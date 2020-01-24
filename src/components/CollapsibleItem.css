@@ -1,24 +1,30 @@
- /* table, th, td {
-    width: 100%;
-    border: 1px solid black
- } */
-
- .item {
+ .card {
    margin-top: 35px;
    margin-bottom: 35px;
    margin-left: 55px;
    margin-right: 55px;
    box-shadow: 10px 10px 20px rgb(39, 38, 38);
+   /* text-align: right; */
  }
 
- .tooltip {
+ .tooltipC {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
+  /* border-bottom: 1px dotted black; */
   cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+ .tooltipT {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.tooltip .tooltiptext {
+.tooltipC .tooltiptext {
   visibility: hidden;
   width: 120px;
   background-color: black;
@@ -26,61 +32,121 @@
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
+  top: -5px;
+  right: 105%;
+  /* margin-top: 30px; */
+  /* float: right;
+  clear: left; */
+  
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.tooltipT .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  top: -5px;
+  right: 105%;
+  /* float: right;
+  clear: left; */
 
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltipC:hover .tooltiptext {
   visibility: visible;
 }
 
-span.fixText {
-  justify-content: center;
-  align-items: center;
-  font-size: 4em;
-  margin-left: 50px;
+.tooltipT:hover .tooltiptext {
+  visibility: visible;
 }
 
-.pointer {
+.productName {
+  /* justify-content: center; */
+  /* align-items: center; */
+  font-size: 4em;
+  margin-left: 200px;
+  text-shadow: 3px 3px 12px rgb(27, 59, 30);
+  font-weight: 800;
+  /* margin-right: 50px; */
+}
+
+.arrows {
   cursor: pointer;
+  margin-right: 30px;
 }
 
 p {
-  font-size: 20px;
+  font-size: 40px;
+  /* line-height: .8; */
 }
 
 .productImage {
-  display:"block";
-  margin-left:"auto";
-  margin-right:"auto";
+  /* display:"block"; */
+  /* margin-left:"auto";
+  margin-right:"auto"; */
   margin-top: 25px;
   margin-bottom: 25px;
   margin-left: 25px;
   box-shadow: 10px 10px 20px rgb(39, 38, 38);
 }
 
-.formatCards {
+.collapsedCard {
   display: flex;
   align-items: center;
-  background-color: #de8d14;
+  background-color: #c28832;
   user-select: none;
+  border: 1px solid black;
 }
 
-.formatOpenCards {
-  display: flex;
-  align-items: center;
-  /* justify-content: left; */
-  background-color: #de8d14;
-  /* width: 1170px; */
-  user-select: none;
-}
-
-/* .expandedItemProperties { */
+.expandedCard {
   /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
   /* align-items: center; */
+  /* justify-content: right; */
+  background-color: #c28832;
+  user-select: none;
+  border: 1px solid black;
+}
+
+.expandedItemProperties {
+  /* display: flex; 
+  flex-direction: column; */
+  /* justify-content: space-between; */
+  /* align-items: center;  */
   /* text-align: right; */
+  margin-left: 100px;
+  /* justify-content: left; */
+  height: max-content;
+  width: 100%;
+  padding: 0px;
+  border: 0px;
+  margin-right: 0px;
+}
+
+.expandedItemContainer {
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+  /* margin-left: 100px; */
+  margin-right: 50px;
+  color: rgb(27, 44, 22);
+  /* float: right;
+  clear: left; */
+  align-items: center;
+}
 

@@ -1,12 +1,13 @@
 button {
     background-color: #de8d14;
-    height: 35px;
+    height: 40px;
     width: 30%;
     font-size: 25px;
     font-weight: 900;
     cursor: pointer;
     box-shadow: 10px 10px 8px rgb(39, 38, 38);
     margin-top: 10px;
+    border: 2px solid black;
 }
 
 .button {
@@ -21,6 +22,8 @@ button {
 
 h4 {
     font-size: 2em;
+    text-shadow: 3px 3px 15px rgb(27, 77, 32);
+    text-align: center;
 }
 
 .addForm {
@@ -33,6 +36,11 @@ h4 {
 .inputFields {
     margin: 10px;
     font-size: 30px;
+    width: 60%;
+    background-color:rgb(218, 235, 179);
+    border: 1px solid black;
+    box-shadow: 10px 10px 20px rgb(39, 38, 38);
+    padding: 5px;
 }
 
 .addFormBackground {
@@ -40,4 +48,7 @@ h4 {
     margin-left: 55px;
     margin-right: 55px;
     padding-bottom: 25px;
+    box-shadow: 10px 10px 20px rgb(39, 38, 38);
+    border: 1px solid black;
+    margin-top: 35px;
 }

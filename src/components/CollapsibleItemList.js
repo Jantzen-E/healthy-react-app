@@ -1,6 +1,6 @@
 import React from 'react';
 import CollapsibleItem from './CollapsibleItem';
-import './CollapsibleItemList.css';
+// import './CollapsibleItemList.css';
 
 class List extends React.Component {
     constructor(props) {
@@ -19,6 +19,7 @@ class List extends React.Component {
                                 key={ item.name } 
                                 handleDelete={ this.props.handleDelete }
                                 handleEdit={ this.props.handleEdit }
+                                /* scrollFunction={ this.props.scrollFunction } */                               
                             />
                 })
             );

@@ -31,11 +31,11 @@ class CollapsibleItem extends React.Component {
 
     render() {
         return (
-            <div className="item">
+            <div className="card">
                 {
                     this.props.item ? (
                         <div>
-                            <div className="formatCards">
+                            <div className="collapsedCard">
                                 <img 
                                     src={ this.props.item.imgUrl } 
                                     alt={ this.props.item.name }
@@ -44,7 +44,7 @@ class CollapsibleItem extends React.Component {
                                     width="430"
                                 />
                                 <span 
-                                    className="fixText"
+                                     className="productName"
                                 >
                                     
                                         { this.props.item.name }
@@ -54,47 +54,34 @@ class CollapsibleItem extends React.Component {
                                         <IoMdArrowDropup 
                                             onClick={ this.handleOpenToggle } 
                                             size={60}
-                                            className="pointer"
+                                            className="arrows"
                                         /> 
                                         : <IoMdArrowDropdown 
                                             onClick={ this.handleOpenToggle } 
                                             size={60}
-                                            className="pointer"
+                                            className="arrows"
                                         />
                                 }
                             </div>
-                            <div className="formatOpenCards">
+                            <div className="expandedCard">
                                 {
                                     this.state.isOpen ? 
                                     (
-                                        <div className="expandedItemProperties">
-                                            <div>
-                                                <p>
-                                                    Benefits: { this.props.item.benefits }
-                                                </p>                                                
-                                                <p>Uses: { this.props.item.uses }
-                                                </p>                                                
-                                                <p>Side effects: { this.props.item.sideEffects } 
-                                                </p>
+                                        <div className="expandedItemContainer">
+                                            <div className="expandedItemProperties">
+                                                <p>Benefits: { this.props.item.benefits }</p>                                                
+                                                <p>Uses: { this.props.item.uses }</p>                                                
+                                                <p>Side effects: { this.props.item.sideEffects }</p>
                                             </div>
-                                            <div className="tooltip">
-                                                <IoMdCreate 
-                                                    size={35} 
-                                                    onClick={ this.handleEdit }
-                                                />
-                                                <span 
-                                                    className="tooltiptext">Edit
-                                                </span>
-                                            </div>
-                                            <br></br>
-                                            <div className="tooltip">
-                                                <IoIosTrash 
-                                                    size={40} 
-                                                    onClick={ this.handleDelete }
-                                                />
-                                                <span 
-                                                    className="tooltiptext">Delete
-                                                </span>
+                                            <div className="icons">
+                                                <div className="tooltipC">                                                
+                                                    <IoMdCreate size={70} onClick={ this.handleEdit}/>                                          
+                                                    <span className="tooltiptext">Edit</span>
+                                                </div>
+                                                <div className="tooltipT">
+                                                    <IoIosTrash size={70} onClick={ this.handleDelete }/>
+                                                    <span className="tooltiptext">Delete</span>
+                                                </div>
                                             </div>
                                         </div>
                                     ) : ''

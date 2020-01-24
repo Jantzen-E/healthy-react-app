@@ -1,15 +1,23 @@
 .footer {
-    background-color: thistle;
+    background-color: #423217;
     margin-bottom: 0px;
     border-bottom: 0px;
-    /* display: flex;
-    flex-direction: row; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-h6 {
+/* h6 {
     margin-bottom: 0px;
+} */
+
+h5.footer {
+    margin-bottom: 0px;
+    color: #de8d14;
+    margin-bottom: 15px;
 }
 
-h4 {
-    margin-bottom: 0px;
+a {
+    color: #de8d14;
 }

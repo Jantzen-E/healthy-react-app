@@ -10,6 +10,9 @@ import qs from "qs";
 class HealthyThingsPage extends React.Component {
   constructor(props) {
     super(props);
+    this.myRef = React.createRef();
+
+
 
     this.state = {
       // originalList: [
@@ -71,8 +74,8 @@ class HealthyThingsPage extends React.Component {
     this.fetchItems = this.fetchItems.bind(this);
     this.createUpdateItem = this.createUpdateItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
-    //TODO: write an update function
-    this.componentDidMount = this.componentDidMount.bind(this);
+    //write an update function
+    // this.componentDidMount = this.componentDidMount.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleSearchEnterKeyPress = this.handleSearchEnterKeyPress.bind(this);
     this.handleSearchChange = this.handleSearchChange.bind(this);
@@ -139,6 +142,7 @@ class HealthyThingsPage extends React.Component {
     // this.setState({
     //     list: list
     // });
+
   }
 
   handleDelete(id) {
@@ -245,16 +249,16 @@ class HealthyThingsPage extends React.Component {
     this.setState({
       editItem: item
     });
+
+    debugger;
+
+    this.myRef.current.scrollIntoView();
   }
-
-  // componentDidUpdate() {
-
-  // }
 
   render() {
     return (
       <div>
-        <div>
+        <div ref={this.myRef}>
           <h1>Nature's Marvels</h1>
           <h3>
             Products from nature that have valuable medical and nutritional
