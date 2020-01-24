@@ -86,7 +86,7 @@ class HealthyThingsPage extends React.Component {
 
   fetchItems(options = {}) {
     axios
-      .get("http://localhost:3000/api/items", { params: options })
+      .get("http://healthy-api.herokuapp.com/api/items", { params: options })
       .then(response => {
         const list = response.data;
 
@@ -104,7 +104,7 @@ class HealthyThingsPage extends React.Component {
   createUpdateItem(item, mode, id) {
     if (mode === "add") {
       axios
-        .post("http://localhost:3000/api/items", item)
+        .post("http://healthy-api.herokuapp.com/api/items", item)
         .then(response => {
           this.fetchItems();
         })
@@ -114,7 +114,7 @@ class HealthyThingsPage extends React.Component {
     } else if (mode === "edit") {
         debugger;
       axios
-        .put(`http://localhost:3000/api/items/${id}`, item)
+        .put(`http://healthy-api.herokuapp.com/api/items/${id}`, item)
         .then(response => {
           this.fetchItems();
         })
@@ -124,7 +124,7 @@ class HealthyThingsPage extends React.Component {
 
   deleteItem(id) {
     axios
-      .delete(`http://localhost:3000/api/items/${id}`)
+      .delete(`http://healthy-api.herokuapp.com/api/items/${id}`)
       .then(response => {
         debugger;
 
