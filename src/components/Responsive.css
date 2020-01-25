@@ -20,6 +20,10 @@
         height: 138px;
         width: 200px;
     }
+
+    .expandedItemProperties {
+        margin-left: 40px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -56,11 +60,22 @@
     .icons {
         margin-right: 20px;
     }
+
+    .expandedItemProperties {
+        margin-left: 20px;
+    }
+
+    .card {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
 @media screen and (max-width: 520px) {
     .productName {
-        font-size: 1em;
+        font-size: 1.5em;
     }
 
     h1.title {
