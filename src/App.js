@@ -5,7 +5,7 @@ import HealthyThingsPage from './components/HealthyThingsPage'
 function App() {
   return (
     <div className="App">
-        <HealthyThingsPage />
+        <HealthyThingsPage /> 
     </div>
   );
 }

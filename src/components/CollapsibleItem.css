@@ -98,6 +98,7 @@ p {
   margin-bottom: 25px;
   margin-left: 25px;
   box-shadow: 10px 10px 20px rgb(39, 38, 38);
+  cursor: pointer;
 }
 
 .collapsedCard {

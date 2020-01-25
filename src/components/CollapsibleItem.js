@@ -22,11 +22,11 @@ class CollapsibleItem extends React.Component {
     }
 
     handleDelete() {
-        this.props.handleDelete(this.props.item._id);
+        this.props.handleDelete(this.props.item._id);  
     }
     
     handleEdit() {
-        this.props.handleEdit(this.props.item);
+        this.props.handleEdit(this.props.item);  
     }
 
     render() {
@@ -42,6 +42,7 @@ class CollapsibleItem extends React.Component {
                                     className="productImage"
                                     height="300" 
                                     width="430"
+                                    onClick={ this.handleOpenToggle }
                                 />
                                 <span 
                                      className="productName"
