@@ -45,6 +45,7 @@ class CollapsibleItem extends React.Component {
                                 />
                                 <span 
                                      className="productName"
+                                     onClick={ this.handleOpenToggle }
                                 >
                                     
                                         { this.props.item.name }
