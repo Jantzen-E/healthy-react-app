@@ -1,6 +1,8 @@
 import React from 'react';
 import './CollapsibleItem.css';
 import { IoMdArrowDropdown, IoMdArrowDropup, IoIosTrash, IoMdCreate } from "react-icons/io";
+// import { Media } from 'react-breakpoints';
+import './Responsive.css';
 
 class CollapsibleItem extends React.Component {
     constructor(props) {
@@ -30,7 +32,7 @@ class CollapsibleItem extends React.Component {
     }
 
     render() {
-        return (
+        return (            
             <div className="card">
                 {
                     this.props.item ? (
@@ -40,13 +42,13 @@ class CollapsibleItem extends React.Component {
                                     src={ this.props.item.imgUrl } 
                                     alt={ this.props.item.name }
                                     className="productImage"
-                                    height="300" 
-                                    width="430"
+                                    /* height="300" 
+                                    width="430" */
                                     onClick={ this.handleOpenToggle }
                                 />
                                 <span 
-                                     className="productName"
-                                     onClick={ this.handleOpenToggle }
+                                    className="productName"
+                                    onClick={ this.handleOpenToggle }
                                 >
                                     
                                         { this.props.item.name }
@@ -55,12 +57,12 @@ class CollapsibleItem extends React.Component {
                                     this.state.isOpen ? 
                                         <IoMdArrowDropup 
                                             onClick={ this.handleOpenToggle } 
-                                            size={60}
+                                            /* size={60} */
                                             className="arrows"
                                         /> 
                                         : <IoMdArrowDropdown 
                                             onClick={ this.handleOpenToggle } 
-                                            size={60}
+                                            /* size={60} */
                                             className="arrows"
                                         />
                                 }
@@ -77,11 +79,11 @@ class CollapsibleItem extends React.Component {
                                             </div>
                                             <div className="icons">
                                                 <div className="tooltipC">                                                
-                                                    <IoMdCreate size={70} onClick={ this.handleEdit}/>                                          
+                                                    <IoMdCreate className="iconSize" onClick={ this.handleEdit}/>                                          
                                                     <span className="tooltiptext">Edit</span>
                                                 </div>
                                                 <div className="tooltipT">
-                                                    <IoIosTrash size={70} onClick={ this.handleDelete }/>
+                                                    <IoIosTrash className="iconSize" onClick={ this.handleDelete }/>
                                                     <span className="tooltiptext">Delete</span>
                                                 </div>
                                             </div>
@@ -93,7 +95,7 @@ class CollapsibleItem extends React.Component {
 
                     ) : ''
                 }
-            </div>
+            </div>            
         );
     }
 }

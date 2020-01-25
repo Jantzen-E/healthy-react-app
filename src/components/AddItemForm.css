@@ -1,6 +1,6 @@
 button {
     background-color: #de8d14;
-    height: 40px;
+    height: 80px;
     width: 30%;
     font-size: 25px;
     font-weight: 900;
@@ -20,8 +20,8 @@ button {
     color: white;
 }
 
-h4 {
-    font-size: 2em;
+h4.add {
+    font-size: 1em;
     text-shadow: 3px 3px 15px rgb(27, 77, 32);
     text-align: center;
 }
@@ -35,7 +35,7 @@ h4 {
 
 .inputFields {
     margin: 10px;
-    font-size: 30px;
+    font-size: 20px;
     width: 60%;
     background-color:rgb(218, 235, 179);
     border: 1px solid black;

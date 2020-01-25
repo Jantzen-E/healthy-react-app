@@ -1,5 +1,6 @@
 import React from "react";
 import "./AddItemForm.css";
+// import './Responsive.css';
 
 class AddItemForm extends React.Component {
   constructor(props) {
@@ -67,7 +68,7 @@ class AddItemForm extends React.Component {
   render() {
     return (
       <div className="addFormBackground">
-        <h4>Fill out the fields below to add a new item to the list</h4>
+        <h4 className="add">Fill out the fields below to add a new item to the list</h4>
         <form onSubmit={this.handleSubmit} className="addForm">
           <input
             type="text"

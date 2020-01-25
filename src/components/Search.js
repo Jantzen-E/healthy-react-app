@@ -1,5 +1,6 @@
 import React from 'react';
 import './Search.css';
+// import './Responsive.css';
 
 class Search extends React.Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class Search extends React.Component {
     render() {
         return (
             <form>
-                <h4>Type the name of an item to see if it exists in the list</h4>
+                <h4 className="searchTitle">Type the name of an item to see if it exists in the list</h4>
                     <input 
                     type="text" 
                     placeholder="Search for an existing item..." 

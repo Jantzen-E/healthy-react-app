@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import CollapsibleItemList from "./CollapsibleItemList";
 import "./HealthyThingsPage.css";
 import qs from "qs";
+import './Responsive.css';
 
 class HealthyThingsPage extends React.Component {
   constructor(props) {
@@ -259,8 +260,8 @@ class HealthyThingsPage extends React.Component {
     return (
       <div>
         <div ref={this.myRef}>
-          <h1>Nature's Marvels</h1>
-          <h3>
+          <h1 className="title">Nature's Marvels</h1>
+          <h3 className="subtitle">
             Products from nature that have valuable medical and nutritional
             benefits
           </h3>
@@ -275,7 +276,7 @@ class HealthyThingsPage extends React.Component {
             handleChange={this.handleSearchChange}
             handleKeyPress={this.handleSearchEnterKeyPress}
           />
-          <h5>Sort by name</h5>
+          <h5 className="sort">Sort by name</h5>
           <select
             value={this.state.sortOrder}
             onChange={e => this.handleSortOrderChange(e)}
