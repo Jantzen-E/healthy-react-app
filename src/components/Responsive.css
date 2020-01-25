@@ -47,18 +47,18 @@
     }
 
     p {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
 @media screen and (max-width: 625px) {
     .productImage {
-        height: 69px;
-        width: 100px;
+        height: 103px;
+        width: 150px;
     }
 
     .icons {
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     .expandedItemProperties {
@@ -91,11 +91,11 @@
     }
 
     p {
-        font-size: 10px;
+        font-size: 17px;
     }
 
     .iconSize {
-        height: 20px;
-        width: 20px;
+        height: 35px;
+        width: 35px;
     }
 }
