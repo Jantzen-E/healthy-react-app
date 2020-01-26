@@ -111,7 +111,7 @@ class AddItemForm extends React.Component {
             className="inputFields"
           />
           <button type="submit" className="button">
-            {this.state.mode === "add" ? "Add To List" : "Update Item"}
+            {this.state.mode === "add" ? "Add" : "Update"}
           </button>
         </form>
       </div>
