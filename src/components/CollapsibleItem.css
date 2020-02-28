@@ -101,8 +101,12 @@ p {
   margin-left: 25px;
   box-shadow: 10px 10px 20px rgb(39, 38, 38);
   cursor: pointer;
-  height: 300px;
-  width: 430px;
+  max-height: 300px;
+  min-height: 200px;
+  max-width: 430px;
+  min-width: 300px;
+  /* background-size: contain;
+  background-position: center, center; */
 }
 
 .collapsedCard {
