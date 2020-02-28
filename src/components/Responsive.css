@@ -17,8 +17,8 @@
 
 @media screen and (max-width: 1200px) {
     .productImage {
-        height: 138px;
-        width: 200px;
+        max-height: 80%;
+        max-width: 30%;
     }
 
     .expandedItemProperties {
@@ -53,8 +53,8 @@
 
 @media screen and (max-width: 625px) {
     .productImage {
-        height: 103px;
-        width: 150px;
+        max-height: 80%;
+        max-width: 30%;
     }
 
     .icons {
