@@ -13,8 +13,6 @@ class HealthyThingsPage extends React.Component {
     super(props);
     this.myRef = React.createRef();
 
-
-
     this.state = {
       // originalList: [
       //     { imgUrl: 'https://i.imgur.com/2J4RQc2.jpg',
@@ -293,6 +291,9 @@ class HealthyThingsPage extends React.Component {
           handleEdit={this.handleEdit}
           className="pageFormat"
         />
+        <div className="bottomOfPage">
+          <button className="buttonNoImage">Image not appearing? Click Here</button>
+        </div>
         <Footer />
       </div>
     );

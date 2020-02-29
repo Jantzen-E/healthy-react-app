@@ -58,3 +58,31 @@ option {
     box-shadow: 10px 10px 20px rgb(39, 38, 38);
     border: 1px solid black;
 }
+
+.buttonNoImage {
+    background-color: #de8d14;
+    height: 40px;
+    width: 50%;
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 10px 10px 8px rgb(39, 38, 38);
+    margin-top: 10px;
+    border: 2px solid black;
+    margin-bottom: 5%;
+}
+
+.buttonNoImage {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+
+.buttonNoImage:hover {
+    background-color: #2e210c;
+    color: white;
+}
+
+.bottomOfPage {
+    display: flex;
+    justify-content: center;
+}
