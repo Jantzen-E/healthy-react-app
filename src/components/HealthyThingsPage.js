@@ -292,7 +292,7 @@ class HealthyThingsPage extends React.Component {
           className="pageFormat"
         />
         <div className="bottomOfPage">
-          <button className="buttonNoImage">Image not appearing? Click Here</button>
+          Image not appearing?<button className="buttonNoImage">Click Here</button>
         </div>
         <Footer />
       </div>

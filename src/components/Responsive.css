@@ -49,6 +49,11 @@
     p {
         font-size: 18px;
     }
+
+    .buttonNoImage {
+        overflow-wrap: break-word;
+        font-size: 2vh;
+    }
 }
 
 @media screen and (max-width: 625px) {

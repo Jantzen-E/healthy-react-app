@@ -73,10 +73,11 @@
   /* justify-content: center; */
   /* align-items: center; */
   font-size: 4em;
-  margin-left: 100px;
+  margin-left: 20%;
   text-shadow: 3px 3px 12px rgb(27, 59, 30);
   font-weight: 800;
   cursor: pointer;
+  overflow-wrap: break-word;
   /* margin-right: 50px; */
 }
 

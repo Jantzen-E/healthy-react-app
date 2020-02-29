@@ -61,10 +61,10 @@ option {
 
 .buttonNoImage {
     background-color: #de8d14;
-    height: 40px;
-    width: 50%;
-    font-size: 25px;
-    font-weight: 900;
+    /* height: 40px; */
+    width: 30%;
+    font-size: 1em;
+    font-weight: 800;
     cursor: pointer;
     box-shadow: 10px 10px 8px rgb(39, 38, 38);
     margin-top: 10px;
@@ -85,4 +85,6 @@ option {
 .bottomOfPage {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
