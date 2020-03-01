@@ -7,6 +7,7 @@ import CollapsibleItemList from "./CollapsibleItemList";
 import "./HealthyThingsPage.css";
 import qs from "qs";
 import './Responsive.css';
+import Modal from "./Modal";
 
 class HealthyThingsPage extends React.Component {
   constructor(props) {
@@ -67,7 +68,8 @@ class HealthyThingsPage extends React.Component {
       list: [],
       sortOrder: "",
       editItem: {},
-      search: ""
+      search: "",
+      show: false,
     };
 
     this.fetchItems = this.fetchItems.bind(this);
@@ -81,6 +83,8 @@ class HealthyThingsPage extends React.Component {
     this.handleSortOrderChange = this.handleSortOrderChange.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
+    this.displayText = this.displayText.bind(this);
+    this.showModal = this.showModal.bind(this);
   }
 
   fetchItems(options = {}) {
@@ -237,6 +241,16 @@ class HealthyThingsPage extends React.Component {
     // });
   }
 
+  showModal(e) {
+    this.setState({
+        show: !this.state.show
+    });
+  };
+
+  // onClose = e => {
+  //   this.props.show = false;
+  // };
+
   handleInputChange(event) {
     const newValue = event.target.value;
     this.setState({
@@ -252,6 +266,12 @@ class HealthyThingsPage extends React.Component {
     debugger;
 
     this.myRef.current.scrollIntoView();
+  }
+
+  displayText = () => {
+    this.setState({
+      displayTexts: !this.state.displayTexts
+    })
   }
 
   render() {
@@ -292,7 +312,8 @@ class HealthyThingsPage extends React.Component {
           className="pageFormat"
         />
         <div className="bottomOfPage">
-          Image not appearing?<button className="buttonNoImage">Click Here</button>
+          <button className="buttonNoImage" onClick={e => {this.showModal(e)}} >Problems with Image?</button>
+          <Modal onClose={this.showModal} show={this.state.show}></Modal>
         </div>
         <Footer />
       </div>

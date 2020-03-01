@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import HealthyThingsPage from './components/HealthyThingsPage'
+import HealthyThingsPage from './components/HealthyThingsPage';
 
 class App extends React.Component {
   constructor(props) {
