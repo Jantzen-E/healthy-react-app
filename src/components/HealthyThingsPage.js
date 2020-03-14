@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import CollapsibleItemList from "./CollapsibleItemList";
 import "./HealthyThingsPage.css";
 import qs from "qs";
-import './Responsive.css';
+ 
 import Modal from "./Modal";
 
 class HealthyThingsPage extends React.Component {
