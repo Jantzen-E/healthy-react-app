@@ -96,11 +96,11 @@
 @media screen and (max-width: 700px) {
     .productImage {
         width: auto;
-        max-width: 150px;
-        min-width: 150px;
+        max-width: 140px;
+        min-width: 140px;
         height: auto;
-        max-height: 125px;
-        min-height: 125px;
+        max-height: 116px;
+        min-height: 116px;
     }
 
     .icons {
