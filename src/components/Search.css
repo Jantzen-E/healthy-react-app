@@ -1,5 +1,5 @@
 .searchInput {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin-bottom: 10px;
     background-color: white;
     color: black;
@@ -9,10 +9,14 @@
 }
 
 .searchTitle {
-    font-size: 1.8em;
+    font-size: 1.5em;
     text-shadow: 3px 3px 15px rgb(27, 77, 32);
 }
 
+.searchForm {
+    margin-left: 25px;
+    margin-right: 25px;
+}
 /* ::placeholder {
     color: rgb(51, 47, 47);
 } */

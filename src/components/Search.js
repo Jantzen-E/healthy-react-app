@@ -11,7 +11,7 @@ class Search extends React.Component {
 
     render() {
         return (
-            <form>
+            <form className="searchForm">
                 <h4 className="searchTitle">Type the name of an item to see if it exists in the list</h4>
                     <input 
                     type="text" 
