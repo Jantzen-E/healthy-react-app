@@ -52,3 +52,7 @@ h4.add {
     border: 1px solid black;
     margin-top: 35px;
 }
+
+h4.add {
+    font-size: 1.8em;
+}

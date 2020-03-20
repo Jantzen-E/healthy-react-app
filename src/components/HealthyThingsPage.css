@@ -88,3 +88,17 @@ option {
     align-items: center;
     flex-direction: column;
 }
+
+.sort {
+    font-size: 1.8em;
+    text-shadow: 3px 3px 15px rgb(27, 77, 32);
+}
+
+.selectInput {
+    width: 30%;
+    font-size: 1.8em;
+}
+
+option {
+    font-size: 1em;
+}
