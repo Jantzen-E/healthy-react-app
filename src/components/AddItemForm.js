@@ -70,6 +70,7 @@ class AddItemForm extends React.Component {
       <div className="addFormBackground">
         <h4 className="add">Fill out the fields below to add a new item to the list</h4>
         <form onSubmit={this.handleSubmit} className="addForm">
+          <label className="inputFieldLabels">Image URL</label>
           <input
             type="text"
             required
@@ -78,6 +79,7 @@ class AddItemForm extends React.Component {
             placeholder="paste image URL here"
             className="inputFields"
           />
+          <label className="inputFieldLabels">Name</label>
           <input
             type="text"
             required
@@ -86,6 +88,7 @@ class AddItemForm extends React.Component {
             placeholder="name of item"
             className="inputFields"
           />
+          <label className="inputFieldLabels">Benefits</label>
           <input
             type="text"
             required
@@ -94,6 +97,7 @@ class AddItemForm extends React.Component {
             placeholder="benefits"
             className="inputFields"
           />
+          <label className="inputFieldLabels">Uses</label>
           <input
             type="text"
             required
@@ -102,6 +106,7 @@ class AddItemForm extends React.Component {
             placeholder="uses"
             className="inputFields"
           />
+          <label className="addItemFormLabels">Side Effects</label>
           <input
             type="text"
             required
