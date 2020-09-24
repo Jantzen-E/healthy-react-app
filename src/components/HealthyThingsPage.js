@@ -70,10 +70,12 @@ class HealthyThingsPage extends React.Component {
       editItem: {},
       search: "",
       show: false,
+      active: false,
     };
 
     this.fetchItems = this.fetchItems.bind(this);
     this.createUpdateItem = this.createUpdateItem.bind(this);
+    this.patchItem = this.patchItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
     //write an update function
     // this.componentDidMount = this.componentDidMount.bind(this);
@@ -123,6 +125,20 @@ class HealthyThingsPage extends React.Component {
         })
         .catch(error => {});
     }
+  }
+
+  patchItem(item, id) {
+    axios
+      .patch(`https://healthy-api.herokuapp.com/api/items/${id}`, item)
+      .then(response => {
+        this.fetchItems();
+      })
+      .catch(error => {
+      });
+      
+      this.setState({
+        active: true
+      });
   }
 
   deleteItem(id) {
