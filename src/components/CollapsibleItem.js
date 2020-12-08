@@ -1,7 +1,6 @@
 import React from 'react';
 import './CollapsibleItem.css';
 import { IoMdArrowDropdown, IoMdArrowDropup, IoIosTrash, IoMdCreate } from "react-icons/io";
-// import { Media } from 'react-breakpoints';
 import './Responsive.css';
 
 class CollapsibleItem extends React.Component {
@@ -42,27 +41,22 @@ class CollapsibleItem extends React.Component {
                                     src={ this.props.item.imgUrl } 
                                     alt={ this.props.item.name }
                                     className="productImage"
-                                    /* height="300" 
-                                    width="430" */
                                     onClick={ this.handleOpenToggle }
                                 />
                                 <span 
                                     className="productName"
                                     onClick={ this.handleOpenToggle }
                                 >
-                                    
                                         { this.props.item.name }
                                 </span>
                                 {
                                     this.state.isOpen ? 
                                         <IoMdArrowDropup 
                                             onClick={ this.handleOpenToggle } 
-                                            /* size={60} */
                                             className="arrows"
                                         /> 
                                         : <IoMdArrowDropdown 
-                                            onClick={ this.handleOpenToggle } 
-                                            /* size={60} */
+                                            onClick={ this.handleOpenToggle }
                                             className="arrows"
                                         />
                                 }

@@ -2,18 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import ReactBreakpoints from 'react-breakpoints';
 import * as serviceWorker from './serviceWorker';
-
-// const breakpoints = {
-//     mobile: 320,
-//     mobileLandscape: 480,
-//     tablet: 768,
-//     tabletLandscape: 1024,
-//     desktop: 1200,
-//     desktopLarge: 1500,
-//     desktopWide: 1920,
-// }
 
 ReactDOM.render(<App />,document.getElementById('root'))
 
@@ -21,6 +10,3 @@ ReactDOM.render(<App />,document.getElementById('root'))
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
-
-//This page is usually left like this unless there is routing.  If there is routing
-// then do the routes here.

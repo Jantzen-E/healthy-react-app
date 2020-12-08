@@ -1,6 +1,5 @@
 import React from "react";
 import "./AddItemForm.css";
-// import './Responsive.css';
 
 class AddItemForm extends React.Component {
   constructor(props) {
@@ -12,7 +11,7 @@ class AddItemForm extends React.Component {
       benefits: "",
       uses: "",
       sideEffects: "",
-      mode: "add" //'edit'
+      mode: "add"
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -50,8 +49,6 @@ class AddItemForm extends React.Component {
       sideEffects: this.state.sideEffects,
     };
 
-    debugger;
-
     this.props.handleSubmit(item, this.state.mode, this.props.editItem._id);
 
     this.setState({
@@ -63,7 +60,6 @@ class AddItemForm extends React.Component {
       mode: "add"
     });
   }
-
 
   render() {
     return (
