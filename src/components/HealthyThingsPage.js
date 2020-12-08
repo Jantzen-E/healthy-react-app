@@ -5,7 +5,7 @@ import Search from "./Search";
 import Footer from "./Footer";
 import CollapsibleItemList from "./CollapsibleItemList";
 import "./HealthyThingsPage.css";
-import qs from "qs";
+// import qs from "qs";
  
 import Modal from "./Modal";
 
@@ -75,7 +75,7 @@ class HealthyThingsPage extends React.Component {
 
     this.fetchItems = this.fetchItems.bind(this);
     this.createUpdateItem = this.createUpdateItem.bind(this);
-    this.patchItem = this.patchItem.bind(this);
+    // this.patchItem = this.patchItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
     //write an update function
     // this.componentDidMount = this.componentDidMount.bind(this);

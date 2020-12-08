@@ -2,13 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 
-
-class Footer extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
+function Footer() {
         return(
             <div className="footer">
                 <h5 className="footer">Jantzen Egan</h5>
@@ -17,14 +11,13 @@ class Footer extends React.Component {
                         size={32}
                     />
                 </a>
-                <a href="https://www.linkedin.com/in/j-egan-/">Linkedin
+                <a href="https://www.linkedin.com/in/jantzen-e/">Linkedin
                     <IoLogoLinkedin 
                         size={32}
                     />
                 </a>
             </div>
-        );   
-    }
+        )
 }
 
 export default Footer;
