@@ -127,19 +127,19 @@ class HealthyThingsPage extends React.Component {
     }
   }
 
-  patchItem(item, id) {
-    axios
-      .patch(`https://healthy-api.herokuapp.com/api/items/${id}`, item)
-      .then(response => {
-        this.fetchItems();
-      })
-      .catch(error => {
-      });
+  // patchItem(item, id) {
+  //   axios
+  //     .patch(`https://healthy-api.herokuapp.com/api/items/${id}`, item)
+  //     .then(response => {
+  //       this.fetchItems();
+  //     })
+  //     .catch(error => {
+  //     });
       
-      this.setState({
-        active: true
-      });
-  }
+  //     this.setState({
+  //       active: true
+  //     });
+  // }
 
   deleteItem(id) {
     axios

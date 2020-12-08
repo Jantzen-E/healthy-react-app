@@ -23,7 +23,7 @@ class Modal extends React.Component {
                     image address" then use that URL to paste into the form.
                 </div>
                 <div className="actions"> 
-                    <button class="toggle-button" onClick={this.onClose}>
+                    <button className="toggle-button" onClick={this.onClose}>
                         close
                     </button>
                 </div>
